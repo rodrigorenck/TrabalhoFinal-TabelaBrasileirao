@@ -2,7 +2,7 @@ package e6;
 
 import java.util.Scanner;
 
-public class Main {
+public class Teste {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -25,9 +25,13 @@ public class Main {
         } while (golsPro < 0 || golsContra < 0);
 
 
-        pont.partida(golsPro, golsContra);
+        pont.setGolsPro(golsPro);
+        pont.setGolsContra(golsContra);
+        pont.atualiza();
 
         System.out.println(pont);
+
+
 
         System.out.println();
         System.out.println("OUTRA PARTIDA");
@@ -37,7 +41,10 @@ public class Main {
             golsContra = in.nextInt();
         } while (golsPro < 0 || golsContra < 0);
 
-        pont.partida(golsPro, golsContra);
+
+        pont.setGolsPro(golsPro);
+        pont.setGolsContra(golsContra);
+        pont.atualiza();
 
         System.out.println(pont);
 

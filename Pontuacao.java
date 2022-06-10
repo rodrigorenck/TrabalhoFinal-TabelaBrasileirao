@@ -11,7 +11,7 @@ public class Pontuacao {
     private int codigo;
     private String nome;
     private int pontos;
-    private double jogos;
+    private int jogos;
     private int vitorias;
     private int empates;
     private int derrotas;
@@ -30,10 +30,20 @@ public class Pontuacao {
         return "[CODIGO]" + codigo + " - [TIME]" + nome + " - [PONTOS]" + pontos + " - [JOGOS]" + jogos +
                 " - [VITORIAS]" + vitorias + " - [EMPATES]" + empates + " - [DERROTAS]" + derrotas +
                 " - [GOLS PRO]" + golsPro + " - [GOLS CONTRA]" + golsContra + " - [SALDO GOLS]" + saldoGols +
-                " - [APROVEITAMENTO]" + aproveitamento;
+                " - [APROVEITAMENTO]" + aproveitamento + "%";
     }
 
-    public void partida(int golsPro, int golsContra){
+    public void setGolsPro(int golsPro) {
+        this.golsPro = golsPro;
+    }
+
+    public void setGolsContra(int golsContra) {
+        this.golsContra = golsContra;
+    }
+
+
+    //Problema - golspro e golscontra nao sao somados! - diferente do partida()
+    public void atualiza(){
         this.jogos++;
         if(golsPro>golsContra){
             this.vitorias++;
@@ -46,9 +56,52 @@ public class Pontuacao {
         }
         int saldo = golsPro - golsContra;
         this.saldoGols += saldo;
-        this.golsPro += golsPro;
-        this.golsContra += golsContra;
-        this.aproveitamento = vitorias/jogos;
+//        this.golsPro += golsPro;
+//        this.golsContra += golsContra;
+        this.aproveitamento = (vitorias/(double)jogos)*100;
     }
 
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public int getPontos() {
+        return pontos;
+    }
+
+    public double getJogos() {
+        return jogos;
+    }
+
+    public int getVitorias() {
+        return vitorias;
+    }
+
+    public int getEmpates() {
+        return empates;
+    }
+
+    public int getDerrotas() {
+        return derrotas;
+    }
+
+    public int getGolsPro() {
+        return golsPro;
+    }
+
+    public int getGolsContra() {
+        return golsContra;
+    }
+
+    public int getSaldoGols() {
+        return saldoGols;
+    }
+
+    public double getAproveitamento() {
+        return aproveitamento;
+    }
 }
