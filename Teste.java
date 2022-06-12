@@ -25,8 +25,8 @@ public class Teste {
         } while (golsPro < 0 || golsContra < 0);
 
 
-        pont.setGolsPro(golsPro);
-        pont.setGolsContra(golsContra);
+        pont.atualizaGolsPro(golsPro);
+        pont.atualizaGolsContra(golsContra);
         pont.atualiza();
 
         System.out.println(pont);
@@ -42,14 +42,12 @@ public class Teste {
         } while (golsPro < 0 || golsContra < 0);
 
 
-        pont.setGolsPro(golsPro);
-        pont.setGolsContra(golsContra);
+        pont.atualizaGolsPro(golsPro);
+        pont.atualizaGolsContra(golsContra);
         pont.atualiza();
 
         System.out.println(pont);
-
-
-
+        System.out.println(pont.getAproveitamento());
 
     }
 }

@@ -33,12 +33,12 @@ public class Pontuacao {
                 " - [APROVEITAMENTO]" + aproveitamento + "%";
     }
 
-    public void setGolsPro(int golsPro) {
-        this.golsPro = golsPro;
+    public void atualizaGolsPro(int golsPro) {
+        this.golsPro += golsPro;
     }
 
-    public void setGolsContra(int golsContra) {
-        this.golsContra = golsContra;
+    public void atualizaGolsContra(int golsContra) {
+        this.golsContra += golsContra;
     }
 
 
@@ -58,7 +58,7 @@ public class Pontuacao {
         this.saldoGols += saldo;
 //        this.golsPro += golsPro;
 //        this.golsContra += golsContra;
-        this.aproveitamento = (vitorias/(double)jogos)*100;
+        this.aproveitamento = (pontos*100)/(double)(jogos*3);
     }
 
     public int getCodigo() {
