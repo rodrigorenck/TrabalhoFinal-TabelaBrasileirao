@@ -23,24 +23,25 @@ public class AppPontuacao {
 
         Pontuacao time1 = new Pontuacao(codigo, nome);
 
-
         int golsPro;
         int golsContra;
         do{
             System.out.print("Gols a favor: ");
             golsPro = sc.nextInt();
+        }while(golsPro<0);
+        do{
             System.out.print("Gols contra: ");
             golsContra = sc.nextInt();
-        }while(golsPro<0 || golsContra<0);
+        }while(golsContra<0);
 
         time1.atualizaGolsPro(golsPro);
         time1.atualizaGolsContra(golsContra);
-        time1.atualiza();
+        time1.atualizaPartida();
 
         System.out.println(time1);
 
-        System.out.println("SEGUNDO TIME");
         System.out.println("");
+        System.out.println("SEGUNDO TIME");
         do{
             System.out.print("Informe o codigo do time: ");
             codigo = sc.nextInt();
@@ -56,13 +57,15 @@ public class AppPontuacao {
         do{
             System.out.print("Gols a favor: ");
             golsPro = sc.nextInt();
+        }while(golsPro<0);
+        do{
             System.out.print("Gols contra: ");
             golsContra = sc.nextInt();
-        }while(golsPro<0 || golsContra<0);
+        }while(golsContra<0);
 
         time2.atualizaGolsPro(golsPro);
         time2.atualizaGolsContra(golsContra);
-        time2.atualiza();
+        time2.atualizaPartida();
 
         System.out.println(time2);
     }

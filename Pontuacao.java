@@ -43,7 +43,7 @@ public class Pontuacao {
 
 
     //Problema - golspro e golscontra nao sao somados! - diferente do partida()
-    public void atualiza(){
+    public void atualizaPartida(){
         this.jogos++;
         if(golsPro>golsContra){
             this.vitorias++;
@@ -54,11 +54,15 @@ public class Pontuacao {
         }else{
             this.derrotas++;
         }
-        int saldo = golsPro - golsContra;
-        this.saldoGols += saldo;
+//        int saldo = golsPro - golsContra;
+        this.saldoGols = golsPro - golsContra;
 //        this.golsPro += golsPro;
 //        this.golsContra += golsContra;
         this.aproveitamento = (pontos*100)/(double)(jogos*3);
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public int getCodigo() {

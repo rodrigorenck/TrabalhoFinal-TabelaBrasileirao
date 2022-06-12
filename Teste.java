@@ -27,7 +27,7 @@ public class Teste {
 
         pont.atualizaGolsPro(golsPro);
         pont.atualizaGolsContra(golsContra);
-        pont.atualiza();
+        pont.atualizaPartida();
 
         System.out.println(pont);
 
@@ -44,7 +44,7 @@ public class Teste {
 
         pont.atualizaGolsPro(golsPro);
         pont.atualizaGolsContra(golsContra);
-        pont.atualiza();
+        pont.atualizaPartida();
 
         System.out.println(pont);
         System.out.println(pont.getAproveitamento());
