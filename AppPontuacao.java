@@ -2,6 +2,7 @@ package e6;
 
 import java.util.Scanner;
 
+//Autores: Rodrigo Renck e Arthur Bonazzi
 public class AppPontuacao {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
