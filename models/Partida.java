@@ -1,4 +1,4 @@
-package e6;
+package e6.models;
 
 
 public class Partida {

@@ -1,4 +1,6 @@
-package e6;
+package e6.models;
+
+import e6.models.Partida;
 
 public class ListaDePartidas {
     private Partida[] lista;
@@ -22,6 +24,7 @@ public class ListaDePartidas {
     }
 
     public boolean inserir(Partida partida){
+        //se tentar add uma partida e a lista ja tiver cheia retorna
         if(posicao== lista.length) return false;
         //aqui fazemos uma validação para garantir que o usuario nao inseriu o time jogando contra ele proprio
         if(partida.getTimeCasa().equalsIgnoreCase(partida.getTimeVisitante())) return false;

@@ -1,5 +1,7 @@
 package e6;
 
+import e6.models.Partida;
+
 public class TesteToStringPartida {
 
 

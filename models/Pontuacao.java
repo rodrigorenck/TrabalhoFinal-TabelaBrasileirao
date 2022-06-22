@@ -1,8 +1,6 @@
-package e6;
+package e6.models;
 
-//fazendo as alteracoes para trabalhar com partida
-public class Pontuacao2 {
-    private int codigo;
+public class Pontuacao {
     private String nome;
     private int pontos;
     private int jogos;
@@ -14,14 +12,13 @@ public class Pontuacao2 {
     private int saldoGols;
     private double aproveitamento;
 
-    public Pontuacao2(int codigo, String timeCasa, String timeVisitante){
-        this.codigo = codigo;
+    public Pontuacao(String nome){
         this.nome = nome;
     }
 
     @Override
     public String toString() {
-        return "[CODIGO]" + codigo + " - [TIME]" + nome + " - [PONTOS]" + pontos + " - [JOGOS]" + jogos +
+        return "[TIME]" + nome + " - [PONTOS]" + pontos + " - [JOGOS]" + jogos +
                 " - [VITORIAS]" + vitorias + " - [EMPATES]" + empates + " - [DERROTAS]" + derrotas +
                 " - [GOLS PRO]" + golsPro + " - [GOLS CONTRA]" + golsContra + " - [SALDO GOLS]" + saldoGols +
                 " - [APROVEITAMENTO]" + aproveitamento + "%";
@@ -35,7 +32,7 @@ public class Pontuacao2 {
 //        this.golsContra += golsContra;
 //    }
 
-    public void atualizaPartida(Partida partida){
+    public void atualizaPartida(int golsPro, int golsContra){
         this.jogos++;
         if(golsPro>golsContra){
             this.vitorias++;
@@ -46,6 +43,8 @@ public class Pontuacao2 {
         }else{
             this.derrotas++;
         }
+        this.golsPro += golsPro;
+        this.golsContra += golsContra;
         this.saldoGols = golsPro - golsContra;
         this.aproveitamento = (pontos*100)/(double)(jogos*3);
     }
@@ -54,9 +53,6 @@ public class Pontuacao2 {
         this.nome = nome;
     }
 
-    public int getCodigo() {
-        return codigo;
-    }
 
     public String getNome() {
         return nome;

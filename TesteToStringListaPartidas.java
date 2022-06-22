@@ -1,5 +1,8 @@
 package e6;
 
+import e6.models.ListaDePartidas;
+import e6.models.Partida;
+
 public class TesteToStringListaPartidas {
 
 
@@ -14,13 +17,13 @@ public class TesteToStringListaPartidas {
         lista.inserir(p1);
         lista.inserir(p2);
 
-        boolean sera = lista.inserir(p3);
-
-        System.out.println(sera);
-
-
-
-        System.out.println(lista.getPosicao());
+//        boolean sera = lista.inserir(p3);
+//
+//        System.out.println(sera);
+//
+//
+//
+//        System.out.println(lista.getPosicao());
 
         System.out.println(lista);
     }
