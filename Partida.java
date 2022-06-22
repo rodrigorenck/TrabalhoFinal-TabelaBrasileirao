@@ -22,6 +22,12 @@ public class Partida {
         this.horario = horario;
     }
 
+    @Override
+    public String toString() {
+        String formatando = String.format("[DATA]%s [HORA]%s [%s] %d X  %d [%s] ", data, horario, timeCasa, golsPro,golsContra, timeVisitante);
+        return formatando;
+    }
+
     //devolve o vencedor da partida
     public String vencedor(){
         if(this.golsPro>golsContra){
