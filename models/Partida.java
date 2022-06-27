@@ -3,6 +3,7 @@ package e6.models;
 
 public class Partida {
 
+    private int codigo;
     private String timeCasa;
     private String timeVisitante;
     //golsPro e contra em relacao ao time da casa!
@@ -14,6 +15,7 @@ public class Partida {
 
     //tenho que fazer verificacos aqui no construtor? ou posso fazer no main
     public Partida(String timeCasa, int golsPro, String timeVisitante, int golsContra, String data, String horario){
+        codigo++;
         this.timeCasa = timeCasa;
         this.golsPro = golsPro;
         this.timeVisitante = timeVisitante;
@@ -24,7 +26,7 @@ public class Partida {
 
     @Override
     public String toString() {
-        String formatando = String.format("[DATA]%s [HORA]%s [%s] %d X  %d [%s] ", data, horario, timeCasa, golsPro,golsContra, timeVisitante);
+        String formatando = String.format("%d [DATA]%s [HORA]%s [%s] %d X  %d [%s] ",codigo,  data, horario, timeCasa, golsPro,golsContra, timeVisitante);
         return formatando;
     }
 

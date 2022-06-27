@@ -33,6 +33,24 @@ public class ListaDePartidas {
         return true;
     }
 
+
+    //ordenar conforme a data - bem dificil pois data e hora vem como Strings entao eu teria que transformar em int pra fazer a comparacao
+//    public void ordena(){
+//        Partida aux;
+//        int r;
+//        for(int i=0; i<posicao-1; i++){
+//            String data = lista[i].getData();
+//            String[] divide = data.split("/");
+//            for(int j=0; j<posicao-1-i; j++){
+//                if(lista[j].getData()<lista[j+1].getPontos()){
+//                    aux = lista[j];
+//                    lista[j] = lista[j+1];
+//                    lista[j+1] = aux;
+//                }
+//            }
+//        }
+//    }
+
     public int getPosicao() {
         return posicao;
     }

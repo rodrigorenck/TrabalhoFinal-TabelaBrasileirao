@@ -18,10 +18,13 @@ public class Pontuacao {
 
     @Override
     public String toString() {
-        return "[TIME]" + nome + " - [PONTOS]" + pontos + " - [JOGOS]" + jogos +
-                " - [VITORIAS]" + vitorias + " - [EMPATES]" + empates + " - [DERROTAS]" + derrotas +
-                " - [GOLS PRO]" + golsPro + " - [GOLS CONTRA]" + golsContra + " - [SALDO GOLS]" + saldoGols +
-                " - [APROVEITAMENTO]" + aproveitamento + "%";
+        String formatando = String.format("%10s - [PONTOS]%d - [JOGOS]%d - [VITORIAS]%d - [EMPATES]%d - [DERROTAS]%d - [GOLS PRO]%d - [GOLS CONTRA]%d - [SALDO GOLS]%d - [APROVEITAMENTO]%.00f",
+                nome, pontos, jogos, vitorias, empates, derrotas, golsPro, golsContra, saldoGols, aproveitamento);
+        return formatando;
+//        return "[TIME]" + nome + " - [PONTOS]" + pontos + " - [JOGOS]" + jogos +
+//                " - [VITORIAS]" + vitorias + " - [EMPATES]" + empates + " - [DERROTAS]" + derrotas +
+//                " - [GOLS PRO]" + golsPro + " - [GOLS CONTRA]" + golsContra + " - [SALDO GOLS]" + saldoGols +
+//                " - [APROVEITAMENTO]" + aproveitamento + "%";
     }
 
 //    public void atualizaGolsPro(int golsPro) {

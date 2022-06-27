@@ -47,6 +47,7 @@ public class TabelaDePontuacao {
         return null;
     }
 
+    //ordena com base nos pontos
     public void ordena(){
         Pontuacao aux;
         int r;

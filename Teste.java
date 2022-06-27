@@ -10,8 +10,8 @@ public class Teste {
 
         Pontuacao pont = new Pontuacao(partida.getTimeCasa());
 
-        pont.atualizaGolsPro(partida.getGolsPro());
-        pont.atualizaGolsContra(partida.getGolsContra());
+//        pont.atualizaGolsPro(partida.getGolsPro());
+//        pont.atualizaGolsContra(partida.getGolsContra());
 
         //pont.atualizaPartida();
 

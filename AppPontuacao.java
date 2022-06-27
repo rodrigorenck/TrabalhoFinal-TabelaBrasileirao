@@ -37,8 +37,8 @@ public class AppPontuacao {
             golsContra = sc.nextInt();
         }while(golsContra<0);
 
-        time1.atualizaGolsPro(golsPro);
-        time1.atualizaGolsContra(golsContra);
+//        time1.atualizaGolsPro(golsPro);
+//        time1.atualizaGolsContra(golsContra);
         time1.atualizaPartida(golsPro, golsContra);
 
         System.out.println(time1);
@@ -66,8 +66,8 @@ public class AppPontuacao {
             golsContra = sc.nextInt();
         }while(golsContra<0);
 
-        time2.atualizaGolsPro(golsPro);
-        time2.atualizaGolsContra(golsContra);
+//        time2.atualizaGolsPro(golsPro);
+//        time2.atualizaGolsContra(golsContra);
         time2.atualizaPartida(golsPro, golsContra);
 
         System.out.println(time2);

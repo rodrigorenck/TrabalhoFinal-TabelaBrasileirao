@@ -20,6 +20,7 @@ public class Aplicacao {
 
         do {
             System.out.println("\n---- MENU ----");
+            System.out.println("0 - Encerra o programa");
             System.out.println("1 - Cria partida");
             System.out.println("2 - Lista partidas");
             System.out.println("3 - Mostra a pontuacao de um time especifico");
@@ -49,31 +50,24 @@ public class Aplicacao {
                     } else {
                         System.out.println("Não foi possivel criar a partida");
                     }
-                    //como que eu verifico se o time ja esta na tabela? e como que eu atualizo o pontuacao com base na partida
+
+                    //se o time ja esta na tabela - pega ele e atualiza os dados
                     if(tabelaBrasileirao.verifica(timeCasa)){
                         Pontuacao atualizarPontuacao = tabelaBrasileirao.buscaTimePeloNome(timeCasa);
-//                        atualizarPontuacao.atualizaGolsPro(golsPro);
-//                        atualizarPontuacao.atualizaGolsContra(golsContra);
                         atualizarPontuacao.atualizaPartida(golsPro, golsContra);
-                        //tabelaBrasileirao.inserir(atualizarPontuacao);
-                    }else{
+                    }else{ //se o time ainda nao foi adicionado - cria uma linha para ele e insere essa linha na tabela
                         Pontuacao criarPontuacao = new Pontuacao(timeCasa);
-//                        criarPontuacao.atualizaGolsPro(golsPro);
-//                        criarPontuacao.atualizaGolsContra(golsCo
                         criarPontuacao.atualizaPartida(golsPro, golsContra);
                         tabelaBrasileirao.inserir(criarPontuacao);
                     }
-                    System.out.println(tabelaBrasileirao);
+                    //aqui fazemos a mesma coisa so que para o time visitante
                     if(tabelaBrasileirao.verifica(timeVisitante)){
                         Pontuacao atualizarPontuacao = tabelaBrasileirao.buscaTimePeloNome(timeVisitante);
-//                        atualizarPontuacao.atualizaGolsPro(golsContra);
-//                        atualizarPontuacao.atualizaGolsContra(golsPro);
                         atualizarPontuacao.atualizaPartida(golsContra, golsPro);
                     }else{
                         Pontuacao criarPontuacao = new Pontuacao(timeVisitante);
-//                        criarPontuacao.atualizaGolsPro(golsContra);
-//                        criarPontuacao.atualizaGolsContra(golsPro);
                         criarPontuacao.atualizaPartida(golsContra, golsPro);
+                        tabelaBrasileirao.inserir(criarPontuacao);
                     }
                     break;
                 case 2:
@@ -86,11 +80,12 @@ public class Aplicacao {
                     System.out.print("Informe o time que deseja: ");
                     String time = inStr.nextLine();
                     Pontuacao p  = tabelaBrasileirao.buscaTimePeloNome(time);
+                    //como eu verifico se é null?
                     System.out.println(p);
-//                    if(tabelaBrasileirao.buscaTimePeloNome(time)){
+//                    if(p == null)){
 //                        System.out.println("Time ainda não foi adicionado a tabela");
 //                    }else{
-//                        System.out.println(tabelaBrasileirao.buscaTimePeloNome(time));
+//                        System.out.println(p);
 //                    }
                     break;
                 case 4:
@@ -100,7 +95,6 @@ public class Aplicacao {
                     break;
             }
         } while (opcao != 0);
-
 
     }
 }

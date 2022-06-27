@@ -8,8 +8,8 @@ public class Teste2 {
 
         Pontuacao pontuacao = new Pontuacao( "Inter");
 
-        pontuacao.atualizaGolsPro(4);
-        pontuacao.atualizaGolsContra(5);
+//        pontuacao.atualizaGolsPro(4);
+//        pontuacao.atualizaGolsContra(5);
 
         //pontuacao.atualizaPartida();
         System.out.println(pontuacao);
