@@ -1,6 +1,9 @@
-package e6;
+package e6.models;
 
-public class Pontuacao {
+import e6.models.Partida;
+
+//fazendo as alteracoes para trabalhar com partida
+public class Pontuacao2 {
     private int codigo;
     private String nome;
     private int pontos;
@@ -13,7 +16,7 @@ public class Pontuacao {
     private int saldoGols;
     private double aproveitamento;
 
-    public Pontuacao(int codigo, String nome){
+    public Pontuacao2(int codigo, String timeCasa, String timeVisitante){
         this.codigo = codigo;
         this.nome = nome;
     }
@@ -26,15 +29,15 @@ public class Pontuacao {
                 " - [APROVEITAMENTO]" + aproveitamento + "%";
     }
 
-    public void atualizaGolsPro(int golsPro) {
-        this.golsPro += golsPro;
-    }
+//    public void atualizaGolsPro(int golsPro) {
+//        this.golsPro += golsPro;
+//    }
+//
+//    public void atualizaGolsContra(int golsContra) {
+//        this.golsContra += golsContra;
+//    }
 
-    public void atualizaGolsContra(int golsContra) {
-        this.golsContra += golsContra;
-    }
-
-    public void atualizaPartida(){
+    public void atualizaPartida(Partida partida){
         this.jogos++;
         if(golsPro>golsContra){
             this.vitorias++;

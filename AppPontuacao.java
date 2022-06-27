@@ -1,7 +1,10 @@
 package e6;
 
+import e6.models.Pontuacao;
+
 import java.util.Scanner;
 
+//Autores: Rodrigo Renck e Arthur Bonazzi
 public class AppPontuacao {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -21,7 +24,7 @@ public class AppPontuacao {
             nome = str.nextLine();
         }while(nome.equalsIgnoreCase("gremio"));
 
-        Pontuacao time1 = new Pontuacao(codigo, nome);
+        Pontuacao time1 = new Pontuacao(nome);
 
         int golsPro;
         int golsContra;
@@ -34,9 +37,9 @@ public class AppPontuacao {
             golsContra = sc.nextInt();
         }while(golsContra<0);
 
-        time1.atualizaGolsPro(golsPro);
-        time1.atualizaGolsContra(golsContra);
-        time1.atualizaPartida();
+//        time1.atualizaGolsPro(golsPro);
+//        time1.atualizaGolsContra(golsContra);
+        time1.atualizaPartida(golsPro, golsContra);
 
         System.out.println(time1);
 
@@ -52,7 +55,7 @@ public class AppPontuacao {
             nome = str.nextLine();
         }while(nome.equalsIgnoreCase("gremio"));
 
-        Pontuacao time2 = new Pontuacao(codigo, nome);
+        Pontuacao time2 = new Pontuacao( nome);
 
         do{
             System.out.print("Gols a favor: ");
@@ -63,9 +66,9 @@ public class AppPontuacao {
             golsContra = sc.nextInt();
         }while(golsContra<0);
 
-        time2.atualizaGolsPro(golsPro);
-        time2.atualizaGolsContra(golsContra);
-        time2.atualizaPartida();
+//        time2.atualizaGolsPro(golsPro);
+//        time2.atualizaGolsContra(golsContra);
+        time2.atualizaPartida(golsPro, golsContra);
 
         System.out.println(time2);
     }

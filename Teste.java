@@ -1,53 +1,22 @@
 package e6;
 
-import java.util.Scanner;
+import e6.models.Partida;
+import e6.models.Pontuacao;
 
 public class Teste {
 
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        Scanner in2 = new Scanner(System.in);
+        Partida partida = new Partida("Inter", 6, "Flamengo", 4, "15/06/2022", "17:30");
 
-        System.out.print("Informe o codigo do time: ");
-        int codigo = in.nextInt();
-        System.out.print("Informe o time: ");
-        String nome = in2.nextLine();
+        Pontuacao pont = new Pontuacao(partida.getTimeCasa());
 
-        Pontuacao pont = new Pontuacao(codigo, nome);
+//        pont.atualizaGolsPro(partida.getGolsPro());
+//        pont.atualizaGolsContra(partida.getGolsContra());
 
-
-        int golsPro;
-        int golsContra;
-        do {
-            System.out.println("Informe quantos gols a favor e quantos gols contra: ");
-            golsPro = in.nextInt();
-            golsContra = in.nextInt();
-        } while (golsPro < 0 || golsContra < 0);
-
-
-        pont.atualizaGolsPro(golsPro);
-        pont.atualizaGolsContra(golsContra);
-        pont.atualizaPartida();
+        //pont.atualizaPartida();
 
         System.out.println(pont);
 
-
-
-        System.out.println();
-        System.out.println("OUTRA PARTIDA");
-        do {
-            System.out.println("Informe quantos gols a favor e quantos gols contra: ");
-            golsPro = in.nextInt();
-            golsContra = in.nextInt();
-        } while (golsPro < 0 || golsContra < 0);
-
-
-        pont.atualizaGolsPro(golsPro);
-        pont.atualizaGolsContra(golsContra);
-        pont.atualizaPartida();
-
-        System.out.println(pont);
-        System.out.println(pont.getAproveitamento());
 
     }
 }
