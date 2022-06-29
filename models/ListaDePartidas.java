@@ -5,6 +5,7 @@ import e6.models.Partida;
 public class ListaDePartidas {
     private Partida[] lista;
     private int posicao; //numero de partidas que ja estao na lista
+    private int codigoPartida;
 
 
     public ListaDePartidas(int tamanho){
@@ -29,6 +30,7 @@ public class ListaDePartidas {
         //aqui fazemos uma validação para garantir que o usuario nao inseriu o time jogando contra ele proprio
         if(partida.getTimeCasa().equalsIgnoreCase(partida.getTimeVisitante())) return false;
         lista[posicao] = partida;
+        codigoPartida++;
         posicao++;
         return true;
     }
@@ -39,10 +41,8 @@ public class ListaDePartidas {
 //        Partida aux;
 //        int r;
 //        for(int i=0; i<posicao-1; i++){
-//            String data = lista[i].getData();
-//            String[] divide = data.split("/");
 //            for(int j=0; j<posicao-1-i; j++){
-//                if(lista[j].getData()<lista[j+1].getPontos()){
+//                if(lista[j].getData().compareTo(lista[j+1].getData()) == -1){
 //                    aux = lista[j];
 //                    lista[j] = lista[j+1];
 //                    lista[j+1] = aux;
@@ -51,16 +51,32 @@ public class ListaDePartidas {
 //        }
 //    }
 
+    public void ordena(){
+        Partida aux;
+        int r;
+        for(int i=0; i<posicao-1; i++){
+            for(int j=0; j<posicao-1-i; j++){
+                if(Integer.valueOf(lista[j].getData())>Integer.valueOf(lista[j+1].getData())){
+                    aux = lista[j];
+                    lista[j] = lista[j+1];
+                    lista[j+1] = aux;
+                }
+            }
+        }
+    }
+
+
+
     public int getPosicao() {
         return posicao;
     }
 
-    //public boolean
-
-
-
-
-
-
-
+    public Partida buscaPartida(int posicaoPartida) {
+        for(int i = 0; i<posicao; i++){
+            if(lista[i].getCodigo()==posicaoPartida){
+                return lista[i];
+            }
+        }
+        return null;
+    }
 }

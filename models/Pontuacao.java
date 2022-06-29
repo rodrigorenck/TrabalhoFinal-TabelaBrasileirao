@@ -18,7 +18,7 @@ public class Pontuacao {
 
     @Override
     public String toString() {
-        String formatando = String.format("%10s - [PONTOS]%d - [JOGOS]%d - [VITORIAS]%d - [EMPATES]%d - [DERROTAS]%d - [GOLS PRO]%d - [GOLS CONTRA]%d - [SALDO GOLS]%d - [APROVEITAMENTO]%.00f",
+        String formatando = String.format("%15s - [PONTOS]%d - [JOGOS]%d - [VITORIAS]%d - [EMPATES]%d - [DERROTAS]%d - [GOLS PRO]%d - [GOLS CONTRA]%d - [SALDO GOLS]%d - [APROVEITAMENTO]%.00f%%",
                 nome, pontos, jogos, vitorias, empates, derrotas, golsPro, golsContra, saldoGols, aproveitamento);
         return formatando;
 //        return "[TIME]" + nome + " - [PONTOS]" + pontos + " - [JOGOS]" + jogos +
