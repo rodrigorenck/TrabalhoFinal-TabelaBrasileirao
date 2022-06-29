@@ -1,7 +1,6 @@
 package e6.models;
 
-import e6.models.Partida;
-
+//Autores: Rodrigo Renck, Arthur Bonazzi, Enrico Cidade
 public class ListaDePartidas {
     private Partida[] lista;
     private int posicao; //numero de partidas que ja estao na lista
@@ -34,22 +33,6 @@ public class ListaDePartidas {
         posicao++;
         return true;
     }
-
-
-    //ordenar conforme a data - bem dificil pois data e hora vem como Strings entao eu teria que transformar em int pra fazer a comparacao
-//    public void ordena(){
-//        Partida aux;
-//        int r;
-//        for(int i=0; i<posicao-1; i++){
-//            for(int j=0; j<posicao-1-i; j++){
-//                if(lista[j].getData().compareTo(lista[j+1].getData()) == -1){
-//                    aux = lista[j];
-//                    lista[j] = lista[j+1];
-//                    lista[j+1] = aux;
-//                }
-//            }
-//        }
-//    }
 
     public void ordena(){
         Partida aux;

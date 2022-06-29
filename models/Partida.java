@@ -1,6 +1,6 @@
 package e6.models;
 
-
+//Autores: Rodrigo Renck, Arthur Bonazzi, Enrico Cidade
 public class Partida {
 
     private int codigo;

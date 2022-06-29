@@ -5,8 +5,9 @@ import e6.models.Partida;
 import e6.models.Pontuacao;
 import e6.models.TabelaDePontuacao;
 
-import java.util.*;
+import java.util.Scanner;
 
+//Autores: Rodrigo Renck, Arthur Bonazzi, Enrico Cidade
 public class Aplicacao {
 
     public static void main(String[] args) {
@@ -20,7 +21,6 @@ public class Aplicacao {
 
 
         int codigoPartida = 1;
-        //popularPartidas(lista);
         do {
 
             System.out.println("\n---- MENU ----");
@@ -138,23 +138,4 @@ public class Aplicacao {
         } while (opcao != 0);
 
     }
-//    private static void popularPartidas(ListaDePartidas listaDePartidas){
-//        String dataNormal = "10082002";
-//
-//
-//
-//        Partida p1 = new Partida("Internacional", 5, "Cuiaba", 3, "20220810", "10082022", "18:00");
-//        Partida p2 = new Partida("Sao Paulo", 2, "Botafogo", 3, "20220809", "09082022", "18:00");
-//        Partida p3 = new Partida("Palmeiras", 3, "Flamengo", 3, "20220806", "06082022", "18:00");
-//
-//
-//        listaDePartidas.inserir(p1);
-//        listaDePartidas.inserir(p2);
-//        listaDePartidas.inserir(p3);
-//    }
-//
-//    private static void popularTabela(TabelaDePontuacao tabelaDePontuacao){
-//
-//
-//    }
 }

@@ -1,5 +1,6 @@
 package e6.models;
 
+//Autores: Rodrigo Renck, Arthur Bonazzi, Enrico Cidade
 public class Pontuacao {
     private String nome;
     private int pontos;
