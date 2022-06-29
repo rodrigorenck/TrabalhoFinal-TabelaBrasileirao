@@ -10,23 +10,29 @@ public class Partida {
     private int golsPro;
     private int golsContra;
     //data e horario tem que ser uma String?
+
+    //data usaremos de tras para frente para facilitar na ordenacao
     private String data;
+
+    //data que usaremos no toString
+    private String dataCerta;
     private String horario;
 
     //tenho que fazer verificacos aqui no construtor? ou posso fazer no main
-    public Partida(String timeCasa, int golsPro, String timeVisitante, int golsContra, String data, String horario){
-        codigo++;
+    public Partida(int codigo, String timeCasa, int golsPro, String timeVisitante, int golsContra, String data, String dataCerta, String horario){
+        this.codigo = codigo;
         this.timeCasa = timeCasa;
         this.golsPro = golsPro;
         this.timeVisitante = timeVisitante;
         this.golsContra = golsContra;
         this.data = data;
+        this.dataCerta = dataCerta;
         this.horario = horario;
     }
 
     @Override
     public String toString() {
-        String formatando = String.format("%d [DATA]%s [HORA]%s [%s] %d X  %d [%s] ",codigo,  data, horario, timeCasa, golsPro,golsContra, timeVisitante);
+        String formatando = String.format("%d [DATA]%s [HORA]%s [%s] %d X  %d [%s] ",codigo, dataCerta, horario, timeCasa, golsPro,golsContra, timeVisitante);
         return formatando;
     }
 
@@ -62,5 +68,9 @@ public class Partida {
 
     public String getHorario() {
         return horario;
+    }
+
+    public int getCodigo() {
+        return codigo;
     }
 }
