@@ -1,7 +1,6 @@
 package e6.models;
 
-import e6.models.Pontuacao;
-
+//Autores: Rodrigo Renck, Arthur Bonazzi, Enrico Cidade
 public class TabelaDePontuacao {
     private Pontuacao[] lista;
     private int posicao;
