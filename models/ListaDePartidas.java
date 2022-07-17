@@ -1,4 +1,4 @@
-package e6.models;
+package tabelaBrasileirao.models;
 
 //Autores: Rodrigo Renck, Arthur Bonazzi, Enrico Cidade
 public class ListaDePartidas {
@@ -36,7 +36,6 @@ public class ListaDePartidas {
 
     public void ordena(){
         Partida aux;
-        int r;
         for(int i=0; i<posicao-1; i++){
             for(int j=0; j<posicao-1-i; j++){
                 if(Integer.valueOf(lista[j].getData())>Integer.valueOf(lista[j+1].getData())){

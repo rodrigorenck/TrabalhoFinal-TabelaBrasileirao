@@ -1,9 +1,9 @@
-package e6;
+package tabelaBrasileirao;
 
-import e6.models.ListaDePartidas;
-import e6.models.Partida;
-import e6.models.Pontuacao;
-import e6.models.TabelaDePontuacao;
+import tabelaBrasileirao.models.ListaDePartidas;
+import tabelaBrasileirao.models.Partida;
+import tabelaBrasileirao.models.Pontuacao;
+import tabelaBrasileirao.models.TabelaDePontuacao;
 
 import java.util.Scanner;
 

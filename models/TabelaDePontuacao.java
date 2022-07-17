@@ -1,4 +1,4 @@
-package e6.models;
+package tabelaBrasileirao.models;
 
 //Autores: Rodrigo Renck, Arthur Bonazzi, Enrico Cidade
 public class TabelaDePontuacao {
